@@ -1,7 +1,22 @@
+# Virtual environment
 .venv/
+
+# Python cache
 __pycache__/
 *.pyc
-.vscode/
-dist/
+*.pyo
+
+# PyInstaller generated files
 build/
+dist/
 *.spec
+
+# Local save data
+savegame.json
+
+# IDE
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db

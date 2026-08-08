@@ -1,21 +1,11 @@
-import tkinter as tk
+from start_screen import StartScreen
 
 
 def main():
-    root = tk.Tk()
-    root.title("Sudoku Solver Pro")
-    root.geometry("900x700")
-    root.minsize(900, 700)
 
-    label = tk.Label(
-        root,
-        text="Sudoku Solver Pro",
-        font=("Segoe UI", 28, "bold")
-    )
+    app = StartScreen()
 
-    label.pack(pady=30)
-
-    root.mainloop()
+    app.run()
 
 
 if __name__ == "__main__":

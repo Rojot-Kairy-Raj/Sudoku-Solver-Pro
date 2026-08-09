@@ -780,9 +780,7 @@ function checkInput(cell) {
 
         updateLives();
 
-        playSound(
-            "../assets/sounds/wrong.wav"
-        );
+        playSound("assets/sounds/wrong.wav");
 
 
         document.getElementById(
@@ -1402,7 +1400,7 @@ function showWinPopup() {
     stopTimer();
 
     playSound(
-        "../assets/sounds/win.wav"
+        "assets/sounds/win.wav"
     );
 
 
@@ -1504,9 +1502,7 @@ function showGameOverPopup() {
     stopTimer();
 
 
-    playSound(
-        "../assets/sounds/game_over.wav"
-    );
+   playSound("assets/sounds/game_over.wav");
 
 
     const popup =

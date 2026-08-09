@@ -1141,3 +1141,87 @@ body {
     height: 34px;
     font-size: 12px;
 }
+/* ========================================= */
+/* BALANCED MOBILE LAYOUT */
+/* ========================================= */
+
+@media (max-width: 500px) {
+
+    #game-screen {
+        min-height: auto;
+        padding: 8px;
+    }
+
+    .game-layout {
+        min-height: auto;
+        gap: 12px;
+    }
+
+    .left-panel {
+        padding: 10px;
+        border-radius: 12px;
+    }
+
+    .game-title {
+        font-size: 22px;
+        margin-top: 30px;
+        margin-bottom: 12px;
+    }
+
+    .sudoku-grid {
+        width: 92vw;
+        max-width: 400px;
+    }
+
+    .sudoku-cell {
+        font-size: clamp(15px, 5vw, 19px);
+    }
+
+    .right-panel {
+        padding: 12px;
+        border-radius: 12px;
+    }
+
+    .lives {
+        font-size: 22px;
+        margin-bottom: 8px;
+    }
+
+    .timer {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .difficulty-select {
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .game-button {
+        height: 42px;
+        font-size: 14px;
+        margin-bottom: 7px;
+    }
+
+    .remaining-title {
+        font-size: 13px;
+        margin-bottom: 6px;
+    }
+
+    .remaining-numbers {
+        gap: 6px;
+    }
+
+    .remaining-item {
+        min-height: 32px;
+        font-size: 12px;
+    }
+
+    .game-back-button {
+        top: 8px;
+        left: 8px;
+        width: 82px;
+        height: 32px;
+        font-size: 12px;
+    }
+}

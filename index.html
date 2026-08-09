@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Sudoku Solver Pro</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+<body>
+
+    <!-- ========================================= -->
+    <!-- START SCREEN -->
+    <!-- ========================================= -->
+
+    <section id="start-screen" class="screen">
+
+        <div class="start-container">
+
+            <h1 class="main-title">
+                Sudoku Solver Pro
+            </h1>
+
+            <p class="subtitle">
+                Play • Solve • Learn
+            </p>
+
+            <button
+                id="start-game-btn"
+                class="main-button"
+            >
+                ▶ Start Game
+            </button>
+
+            <button
+                id="about-btn"
+                class="main-button secondary-button"
+            >
+                ℹ About
+            </button>
+
+            <button
+                id="exit-btn"
+                class="main-button exit-button"
+            >
+                Exit
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ========================================= -->
+    <!-- ABOUT SCREEN -->
+    <!-- ========================================= -->
+
+    <section
+        id="about-screen"
+        class="screen hidden"
+    >
+
+        <button
+            id="about-back-top"
+            class="back-top-button"
+        >
+            ← Back
+        </button>
+
+
+        <div class="about-container">
+
+            <h2 class="about-title">
+                About Sudoku Solver Pro
+            </h2>
+
+
+            <!-- WHAT IS SUDOKU -->
+
+            <div class="about-section">
+
+                <h3>
+                    What is Sudoku?
+                </h3>
+
+                <p>
+                    Sudoku is a number puzzle played on a 9×9 grid.
+                    The goal is to fill every empty cell with numbers
+                    from 1 to 9.
+                </p>
+
+            </div>
+
+
+            <!-- HOW TO PLAY -->
+
+            <div class="about-section">
+
+                <h3>
+                    How to Play
+                </h3>
+
+                <p>
+                    • Each row must contain 1–9 without repetition.<br>
+                    • Each column must contain 1–9 without repetition.<br>
+                    • Each 3×3 box must contain 1–9 without repetition.<br>
+                    • Enter numbers in empty cells to solve the puzzle.
+                </p>
+
+            </div>
+
+
+            <!-- GAME FEATURES -->
+
+            <div class="about-section">
+
+                <h3>
+                    Game Features
+                </h3>
+
+                <p>
+                    • Easy, Medium &amp; Hard difficulty<br>
+                    • 3 Lives<br>
+                    • Limited Hints<br>
+                    • Timer<br>
+                    • Remaining Number Progress<br>
+                    • Rating after completing a puzzle<br>
+                    • Sound Effects
+                </p>
+
+            </div>
+
+
+            <!-- TIP -->
+
+            <div class="about-section">
+
+                <h3>
+                    Tip
+                </h3>
+
+                <p>
+                    Use logic and check the row, column and 3×3 box
+                    before entering a number.
+                </p>
+
+            </div>
+
+
+            <!-- DEVELOPER -->
+
+            <div class="developer-section">
+
+                <p class="developer-name">
+                    Developed by<br>
+                    <strong>ROJOT KAIRY RAJ</strong>
+                </p>
+
+                <p class="developer-symbol">
+                    (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧
+                </p>
+
+                <p class="version">
+                    Sudoku Solver Pro • Version 1.0
+                </p>
+
+
+                <button
+                    id="github-btn"
+                    class="about-button"
+                >
+                    GitHub
+                </button>
+
+
+           
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ========================================= -->
+    <!-- GAME SCREEN -->
+    <!-- ========================================= -->
+
+    <section
+        id="game-screen"
+        class="screen hidden"
+    >
+    <button
+    id="game-back-btn"
+    class="game-back-button"
+>
+    ← Back
+</button>
+
+        <div class="game-layout">
+
+
+            <!-- ================================= -->
+            <!-- LEFT PANEL -->
+            <!-- ================================= -->
+
+            <main class="left-panel">
+
+                <div class="game-title">
+
+                    <span>
+                        Sudoku Solver
+                    </span>
+
+                    <span class="title-symbol">
+                        ヾ(⌐■_■)ノ♪
+                    </span>
+
+                </div>
+
+
+                <!-- SUDOKU GRID -->
+
+                <div
+                    id="sudoku-grid"
+                    class="sudoku-grid"
+                >
+                </div>
+
+            </main>
+
+
+            <!-- ================================= -->
+            <!-- RIGHT PANEL -->
+            <!-- ================================= -->
+
+            <aside class="right-panel">
+
+
+                <!-- LIVES -->
+
+                <div
+                    id="lives"
+                    class="lives"
+                >
+                    ❤️❤️❤️
+                </div>
+
+
+                <!-- TIMER -->
+
+                <div
+                    id="timer"
+                    class="timer"
+                >
+                    ⏱ 00:00
+                </div>
+
+
+                <!-- DIFFICULTY -->
+
+                <div class="control-title">
+                    DIFFICULTY
+                </div>
+
+                <select
+                    id="difficulty"
+                    class="difficulty-select"
+                >
+                    <option value="Easy">
+                        Easy
+                    </option>
+
+                    <option
+                        value="Medium"
+                        selected
+                    >
+                        Medium
+                    </option>
+
+                    <option value="Hard">
+                        Hard
+                    </option>
+                </select>
+
+
+                <div class="separator">
+                    ━━━━━━━━━━━━━━
+                </div>
+
+
+                <!-- GAME BUTTONS -->
+
+                <button
+                    id="generate-btn"
+                    class="game-button"
+                >
+                    Generate
+                </button>
+
+
+                <button
+                    id="solve-btn"
+                    class="game-button"
+                >
+                    Solve
+                </button>
+
+
+                <button
+                    id="hint-btn"
+                    class="game-button"
+                >
+                    Hint (3)
+                </button>
+
+
+                <button
+                    id="restart-btn"
+                    class="game-button"
+                >
+                    Restart
+                </button>
+
+
+                <!-- REMAINING NUMBERS -->
+
+                <div class="remaining-title">
+                    REMAINING NUMBERS
+                </div>
+
+                <div
+                    id="remaining-numbers"
+                    class="remaining-numbers"
+                >
+
+                    <div
+                        data-number="1"
+                        class="remaining-item"
+                    >
+                        1 : 0
+                    </div>
+
+                    <div
+                        data-number="2"
+                        class="remaining-item"
+                    >
+                        2 : 0
+                    </div>
+
+                    <div
+                        data-number="3"
+                        class="remaining-item"
+                    >
+                        3 : 0
+                    </div>
+
+                    <div
+                        data-number="4"
+                        class="remaining-item"
+                    >
+                        4 : 0
+                    </div>
+
+                    <div
+                        data-number="5"
+                        class="remaining-item"
+                    >
+                        5 : 0
+                    </div>
+
+                    <div
+                        data-number="6"
+                        class="remaining-item"
+                    >
+                        6 : 0
+                    </div>
+
+                    <div
+                        data-number="7"
+                        class="remaining-item"
+                    >
+                        7 : 0
+                    </div>
+
+                    <div
+                        data-number="8"
+                        class="remaining-item"
+                    >
+                        8 : 0
+                    </div>
+
+                    <div
+                        data-number="9"
+                        class="remaining-item"
+                    >
+                        9 : 0
+                    </div>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+
+        <!-- STATUS -->
+
+        <div
+            id="status-text"
+            class="status"
+        >
+            Status : Ready
+        </div>
+
+    </section>
+
+
+    <!-- ========================================= -->
+    <!-- POPUPS -->
+    <!-- ========================================= -->
+
+    <div
+        id="popup-container"
+        class="popup-container hidden"
+    >
+    </div>
+
+
+    <script src="script.js"></script>
+   
+
+</body>
+
+</html>
